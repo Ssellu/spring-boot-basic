@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul th:each="person:${people}">
+        <li th:text="${person.name + ',' + person.age + '세'}"></li>
+    </ul>
+    <hr/>
+    <ul th:each="person:${people}">
+        <li th:object="${person}">
+            <span th:text="*{name}"></span>
+            ,
+            <span th:text="*{age}"></span>
+            세
+        </li>
+    </ul>
+</body>
+</html>
