@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1 th:text="${dan+'단'}"></h1>
+
+    <p th:each="num : ${#numbers.sequence(1, 9)}">
+        <span th:text="${dan}"></span>
+        X
+        <span th:text="${num}"></span>
+        =
+        <span th:text="${dan * num}"></span>
+    </p>
+</body>
+</html>
